@@ -10,11 +10,10 @@ struct CalendarView: View {
     @State private var currentDate = Date()
     private let calendar = Calendar.current
     
-    // Define some sample meetings for the week of March 14, 2024
     private var meetings: [Meeting] = [
-        Meeting(title: "Team Meeting", start: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 14, hour: 9))!, end: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 14, hour: 10))!),
-        Meeting(title: "Project Review", start: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 15, hour: 14))!, end: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 15, hour: 15))!),
-        Meeting(title: "One-on-One", start: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 16, hour: 11))!, end: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 16, hour: 12))!)
+        Meeting(title: "Team Meeting", start: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 14, hour: 9, minute: 0))!, end: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 14, hour: 10, minute: 0))!),
+        Meeting(title: "Project Review", start: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 15, hour: 14, minute: 15))!, end: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 15, hour: 15, minute: 0))!),
+        Meeting(title: "One-on-One", start: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 11, hour: 11, minute: 30))!, end: Calendar.current.date(from: DateComponents(year: 2024, month: 3, day: 11, hour: 12, minute: 45))!)
     ]
     
     private var daysOfWeek: [String] {
@@ -26,8 +25,8 @@ struct CalendarView: View {
     }
     
     private var timeSlots: [String] {
-        (8...20).map { hour -> String in
-            "\(hour):00"
+        (8...20).flatMap { hour -> [String] in
+            ["\(hour):00", "", "", ""]
         }
     }
     
@@ -36,12 +35,12 @@ struct CalendarView: View {
             LinearGradient(gradient: Gradient(colors: [Color.red.opacity(0.7), Color.red]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
+            VStack(spacing: 0) {
                 weekNavigation
                 daysOfWeekHeader.padding(.horizontal, 16)
                 
                 ScrollView(showsIndicators: false) {
-                    VStack {
+                    VStack(spacing: 0) {
                         ForEach(0..<timeSlots.count, id: \.self) { index in
                             timeSlotRow(hourIndex: index)
                         }
@@ -89,39 +88,39 @@ struct CalendarView: View {
                     .font(.headline)
             }
         }
-        .padding(.bottom)
+        .padding(.bottom, 0)
     }
     
     private func timeSlotRow(hourIndex: Int) -> some View {
-        LazyVGrid(columns: gridItems, spacing: 20) {
+        LazyVGrid(columns: gridItems, spacing: 0) {
             ForEach(0..<6, id: \.self) { column in
                 if column == 0 {
                     Text(timeSlots[hourIndex])
                         .font(.caption)
                         .foregroundColor(.gray)
-                        .frame(height: 60)
+                        .frame(height: 15)
                 } else {
                     let dayOffset = column - 1
                     Rectangle()
-                        .frame(height: 60)
-                        .foregroundColor(isMeetingTime(slotHour: hourIndex + 8, dayOffset: dayOffset) ? Color.red.opacity(0.3) : Color.clear)
-                        .border(Color.gray.opacity(0.3))
+                        .frame(height: 15)
+                        .foregroundColor(isMeetingTime(slotIndex: hourIndex, dayOffset: dayOffset) ? Color.red.opacity(0.3) : Color.white)
                 }
             }
         }
     }
     
-    private func isMeetingTime(slotHour: Int, dayOffset: Int) -> Bool {
+    private func isMeetingTime(slotIndex: Int, dayOffset: Int) -> Bool {
         guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: currentDate)),
-              let checkDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfWeek),
-              let slotStartDate = calendar.date(bySettingHour: slotHour, minute: 0, second: 0, of: checkDate) else {
+              let checkDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfWeek) else {
             return false
         }
-
-        for meeting in meetings {
-            if slotStartDate >= meeting.start, slotStartDate < meeting.end {
-                return true
-            }
+        
+        let slotStartMinute = (slotIndex % 4) * 15
+        let slotHour = 8 + (slotIndex / 4)
+        if let slotStartDate = calendar.date(bySettingHour: slotHour, minute: slotStartMinute, second: 0, of: checkDate) {
+            return meetings.contains(where: { meeting in
+                slotStartDate >= meeting.start && slotStartDate < meeting.end
+            })
         }
         
         return false
