@@ -4,39 +4,48 @@ struct HomeView: View {
     // State variable to track the current selection
     @State private var selection = 1
     
+    init() {
+        // Set tab bar's background color
+        UITabBar.appearance().backgroundColor = UIColor.white.withAlphaComponent(0.7)
+
+        // Set the tab bar item's active (selected) tint color
+        UITabBar.appearance().tintColor = UIColor.red
+
+        // Set the tab bar item's inactive (unselected) tint color
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+    }
+
     var body: some View {
-        // Using VStack to place the TabView at the bottom
-        VStack {
-            Spacer() // Pushes everything to the bottom
+        TabView(selection: $selection) {
+            MatchView()
+                .tabItem {
+                    Label("Match", systemImage: "person.3.fill")
+                        .foregroundColor(.white)
+                }
+                .tag(1)
             
-            // TabView definition
-            TabView(selection: $selection) {
-                // Match tab
-                MatchView()
-                    .tabItem {
-                        Label("Match", systemImage: "person.3.fill")
-                    }
-                    .tag(1) // Unique identifier for this tab
-                
-                // Calendar tab
-                CalendarView()
-                    .tabItem {
-                        Label("Calendar", systemImage: "calendar")
-                    }
-                    .tag(2) // Unique identifier for this tab
-                
-                // Profile tab
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                    .tag(3) // Unique identifier for this tab
-            }
-            .accentColor(.red) // Highlights the current selection in red
+            CalendarView()
+                .tabItem {
+                    Label("Calendar", systemImage: "calendar")
+                        .foregroundColor(.white)
+                }
+                .tag(2)
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                        .foregroundColor(.white)
+                }
+                .tag(3)
         }
+        .accentColor(Color.red)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
-#Preview {
-    HomeView()
+// Preview
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
 }
