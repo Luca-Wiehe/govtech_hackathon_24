@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD47D91B2BA308FC004F0019 /* govtech_hackathonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D91A2BA308FC004F0019 /* govtech_hackathonApp.swift */; };
+		CD47D91D2BA308FC004F0019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D91C2BA308FC004F0019 /* ContentView.swift */; };
+		CD47D91F2BA30900004F0019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD47D91E2BA30900004F0019 /* Assets.xcassets */; };
+		CD47D9222BA30900004F0019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD47D9212BA30900004F0019 /* Preview Assets.xcassets */; };
+		CD47D92C2BA30901004F0019 /* govtech_hackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D92B2BA30901004F0019 /* govtech_hackathonTests.swift */; };
+		CD47D9362BA30901004F0019 /* govtech_hackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9352BA30901004F0019 /* govtech_hackathonUITests.swift */; };
+		CD47D9382BA30901004F0019 /* govtech_hackathonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9372BA30901004F0019 /* govtech_hackathonUITestsLaunchTests.swift */; };
+		CD47D9452BA30A8F004F0019 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9442BA30A8F004F0019 /* HomeView.swift */; };
+		CD47D9472BA30AAB004F0019 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9462BA30AAB004F0019 /* StartView.swift */; };
+		CD47D9492BA30AD3004F0019 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9482BA30AD3004F0019 /* CalendarView.swift */; };
+		CD47D94B2BA30AE5004F0019 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D94A2BA30AE5004F0019 /* ProfileView.swift */; };
+		CD47D94D2BA310E8004F0019 /* GrantAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D94C2BA310E8004F0019 /* GrantAccessView.swift */; };
+		CD47D94F2BA32B59004F0019 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D94E2BA32B59004F0019 /* NavigationController.swift */; };
+		CD47D9512BA33A76004F0019 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9502BA33A76004F0019 /* MatchView.swift */; };
+		CD47D9532BA33A97004F0019 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9522BA33A97004F0019 /* SwipeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD47D9282BA30901004F0019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD47D90F2BA308FC004F0019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD47D9162BA308FC004F0019;
+			remoteInfo = govtech_hackathon;
+		};
+		CD47D9322BA30901004F0019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD47D90F2BA308FC004F0019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD47D9162BA308FC004F0019;
+			remoteInfo = govtech_hackathon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD47D9172BA308FC004F0019 /* govtech_hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = govtech_hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD47D91A2BA308FC004F0019 /* govtech_hackathonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = govtech_hackathonApp.swift; sourceTree = "<group>"; };
+		CD47D91C2BA308FC004F0019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD47D91E2BA30900004F0019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD47D9212BA30900004F0019 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD47D9272BA30901004F0019 /* govtech_hackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govtech_hackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD47D92B2BA30901004F0019 /* govtech_hackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = govtech_hackathonTests.swift; sourceTree = "<group>"; };
+		CD47D9312BA30901004F0019 /* govtech_hackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govtech_hackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD47D9352BA30901004F0019 /* govtech_hackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = govtech_hackathonUITests.swift; sourceTree = "<group>"; };
+		CD47D9372BA30901004F0019 /* govtech_hackathonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = govtech_hackathonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CD47D9442BA30A8F004F0019 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CD47D9462BA30AAB004F0019 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		CD47D9482BA30AD3004F0019 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		CD47D94A2BA30AE5004F0019 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CD47D94C2BA310E8004F0019 /* GrantAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrantAccessView.swift; sourceTree = "<group>"; };
+		CD47D94E2BA32B59004F0019 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CD47D9502BA33A76004F0019 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		CD47D9522BA33A97004F0019 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD47D9142BA308FC004F0019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD47D9242BA30901004F0019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD47D92E2BA30901004F0019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD47D90E2BA308FC004F0019 = {
+			isa = PBXGroup;
+			children = (
+				CD47D9192BA308FC004F0019 /* govtech_hackathon */,
+				CD47D92A2BA30901004F0019 /* govtech_hackathonTests */,
+				CD47D9342BA30901004F0019 /* govtech_hackathonUITests */,
+				CD47D9182BA308FC004F0019 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD47D9182BA308FC004F0019 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD47D9172BA308FC004F0019 /* govtech_hackathon.app */,
+				CD47D9272BA30901004F0019 /* govtech_hackathonTests.xctest */,
+				CD47D9312BA30901004F0019 /* govtech_hackathonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD47D9192BA308FC004F0019 /* govtech_hackathon */ = {
+			isa = PBXGroup;
+			children = (
+				CD47D91A2BA308FC004F0019 /* govtech_hackathonApp.swift */,
+				CD47D91C2BA308FC004F0019 /* ContentView.swift */,
+				CD47D91E2BA30900004F0019 /* Assets.xcassets */,
+				CD47D9202BA30900004F0019 /* Preview Content */,
+				CD47D9442BA30A8F004F0019 /* HomeView.swift */,
+				CD47D9462BA30AAB004F0019 /* StartView.swift */,
+				CD47D9482BA30AD3004F0019 /* CalendarView.swift */,
+				CD47D94A2BA30AE5004F0019 /* ProfileView.swift */,
+				CD47D94C2BA310E8004F0019 /* GrantAccessView.swift */,
+				CD47D94E2BA32B59004F0019 /* NavigationController.swift */,
+				CD47D9502BA33A76004F0019 /* MatchView.swift */,
+				CD47D9522BA33A97004F0019 /* SwipeView.swift */,
+			);
+			path = govtech_hackathon;
+			sourceTree = "<group>";
+		};
+		CD47D9202BA30900004F0019 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD47D9212BA30900004F0019 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD47D92A2BA30901004F0019 /* govtech_hackathonTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD47D92B2BA30901004F0019 /* govtech_hackathonTests.swift */,
+			);
+			path = govtech_hackathonTests;
+			sourceTree = "<group>";
+		};
+		CD47D9342BA30901004F0019 /* govtech_hackathonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD47D9352BA30901004F0019 /* govtech_hackathonUITests.swift */,
+				CD47D9372BA30901004F0019 /* govtech_hackathonUITestsLaunchTests.swift */,
+			);
+			path = govtech_hackathonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD47D9162BA308FC004F0019 /* govtech_hackathon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD47D93B2BA30901004F0019 /* Build configuration list for PBXNativeTarget "govtech_hackathon" */;
+			buildPhases = (
+				CD47D9132BA308FC004F0019 /* Sources */,
+				CD47D9142BA308FC004F0019 /* Frameworks */,
+				CD47D9152BA308FC004F0019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = govtech_hackathon;
+			productName = govtech_hackathon;
+			productReference = CD47D9172BA308FC004F0019 /* govtech_hackathon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD47D9262BA30901004F0019 /* govtech_hackathonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD47D93E2BA30901004F0019 /* Build configuration list for PBXNativeTarget "govtech_hackathonTests" */;
+			buildPhases = (
+				CD47D9232BA30901004F0019 /* Sources */,
+				CD47D9242BA30901004F0019 /* Frameworks */,
+				CD47D9252BA30901004F0019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD47D9292BA30901004F0019 /* PBXTargetDependency */,
+			);
+			name = govtech_hackathonTests;
+			productName = govtech_hackathonTests;
+			productReference = CD47D9272BA30901004F0019 /* govtech_hackathonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD47D9302BA30901004F0019 /* govtech_hackathonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD47D9412BA30901004F0019 /* Build configuration list for PBXNativeTarget "govtech_hackathonUITests" */;
+			buildPhases = (
+				CD47D92D2BA30901004F0019 /* Sources */,
+				CD47D92E2BA30901004F0019 /* Frameworks */,
+				CD47D92F2BA30901004F0019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD47D9332BA30901004F0019 /* PBXTargetDependency */,
+			);
+			name = govtech_hackathonUITests;
+			productName = govtech_hackathonUITests;
+			productReference = CD47D9312BA30901004F0019 /* govtech_hackathonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD47D90F2BA308FC004F0019 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					CD47D9162BA308FC004F0019 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					CD47D9262BA30901004F0019 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CD47D9162BA308FC004F0019;
+					};
+					CD47D9302BA30901004F0019 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CD47D9162BA308FC004F0019;
+					};
+				};
+			};
+			buildConfigurationList = CD47D9122BA308FC004F0019 /* Build configuration list for PBXProject "govtech_hackathon" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD47D90E2BA308FC004F0019;
+			productRefGroup = CD47D9182BA308FC004F0019 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD47D9162BA308FC004F0019 /* govtech_hackathon */,
+				CD47D9262BA30901004F0019 /* govtech_hackathonTests */,
+				CD47D9302BA30901004F0019 /* govtech_hackathonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD47D9152BA308FC004F0019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD47D9222BA30900004F0019 /* Preview Assets.xcassets in Resources */,
+				CD47D91F2BA30900004F0019 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD47D9252BA30901004F0019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD47D92F2BA30901004F0019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD47D9132BA308FC004F0019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD47D9492BA30AD3004F0019 /* CalendarView.swift in Sources */,
+				CD47D94F2BA32B59004F0019 /* NavigationController.swift in Sources */,
+				CD47D9452BA30A8F004F0019 /* HomeView.swift in Sources */,
+				CD47D9532BA33A97004F0019 /* SwipeView.swift in Sources */,
+				CD47D91D2BA308FC004F0019 /* ContentView.swift in Sources */,
+				CD47D9512BA33A76004F0019 /* MatchView.swift in Sources */,
+				CD47D91B2BA308FC004F0019 /* govtech_hackathonApp.swift in Sources */,
+				CD47D94B2BA30AE5004F0019 /* ProfileView.swift in Sources */,
+				CD47D9472BA30AAB004F0019 /* StartView.swift in Sources */,
+				CD47D94D2BA310E8004F0019 /* GrantAccessView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD47D9232BA30901004F0019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD47D92C2BA30901004F0019 /* govtech_hackathonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD47D92D2BA30901004F0019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD47D9362BA30901004F0019 /* govtech_hackathonUITests.swift in Sources */,
+				CD47D9382BA30901004F0019 /* govtech_hackathonUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD47D9292BA30901004F0019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD47D9162BA308FC004F0019 /* govtech_hackathon */;
+			targetProxy = CD47D9282BA30901004F0019 /* PBXContainerItemProxy */;
+		};
+		CD47D9332BA30901004F0019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD47D9162BA308FC004F0019 /* govtech_hackathon */;
+			targetProxy = CD47D9322BA30901004F0019 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CD47D9392BA30901004F0019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD47D93A2BA30901004F0019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD47D93C2BA30901004F0019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"govtech_hackathon/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.F-Sharp.govtech-hackathon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD47D93D2BA30901004F0019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"govtech_hackathon/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.F-Sharp.govtech-hackathon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD47D93F2BA30901004F0019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.F-Sharp.govtech-hackathonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/govtech_hackathon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/govtech_hackathon";
+			};
+			name = Debug;
+		};
+		CD47D9402BA30901004F0019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.F-Sharp.govtech-hackathonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/govtech_hackathon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/govtech_hackathon";
+			};
+			name = Release;
+		};
+		CD47D9422BA30901004F0019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.F-Sharp.govtech-hackathonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = govtech_hackathon;
+			};
+			name = Debug;
+		};
+		CD47D9432BA30901004F0019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.F-Sharp.govtech-hackathonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = govtech_hackathon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD47D9122BA308FC004F0019 /* Build configuration list for PBXProject "govtech_hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD47D9392BA30901004F0019 /* Debug */,
+				CD47D93A2BA30901004F0019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD47D93B2BA30901004F0019 /* Build configuration list for PBXNativeTarget "govtech_hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD47D93C2BA30901004F0019 /* Debug */,
+				CD47D93D2BA30901004F0019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD47D93E2BA30901004F0019 /* Build configuration list for PBXNativeTarget "govtech_hackathonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD47D93F2BA30901004F0019 /* Debug */,
+				CD47D9402BA30901004F0019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD47D9412BA30901004F0019 /* Build configuration list for PBXNativeTarget "govtech_hackathonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD47D9422BA30901004F0019 /* Debug */,
+				CD47D9432BA30901004F0019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD47D90F2BA308FC004F0019 /* Project object */;
+}
