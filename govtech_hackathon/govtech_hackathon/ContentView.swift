@@ -10,6 +10,8 @@ struct ContentView: View {
                 StartView()
             case 2:
                 GrantAccessView()
+            case 3:
+                SwipeView()
             default:
                 HomeView()
             }

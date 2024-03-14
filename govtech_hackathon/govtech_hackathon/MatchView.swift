@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct MatchView: View {
+    
+    @EnvironmentObject var navigationController: NavigationController
+
     @State private var selectedCity: String = "Zurich"
     @State private var selectedLanguage: String = "English"
     @State private var selectedInteractionType: String = "Coffee Chat"
@@ -15,7 +18,7 @@ struct MatchView: View {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color.red.opacity(0.7), Color.red]), startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all)
-                
+
                 VStack {
                     Text("Select Matching Criteria")
                         .font(.largeTitle)
@@ -64,29 +67,29 @@ struct MatchView: View {
                             .padding(.top)
 
                         HStack(spacing: 10) {
-                            Button("Similar") {
-                                isSimilar = true
+                            Button(action: { isSimilar = true }) {
+                                Text("Similar")
+                                    .foregroundColor(isSimilar ? Color.red : Color.black)
+                                    .padding()
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .stroke(Color.red, lineWidth: isSimilar ? 2 : 0)
+                                    )
+                                    .background(isSimilar ? Color.white : Color.clear)
+                                    .cornerRadius(5)
                             }
-                            .foregroundColor(isSimilar ? Color.red : Color.black)
-                            .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color.red, lineWidth: isSimilar ? 2 : 0)
-                            )
-                            .background(isSimilar ? Color.white : Color.clear)
-                            .cornerRadius(5)
 
-                            Button("Dissimilar") {
-                                isSimilar = false
+                            Button(action: { isSimilar = false }) {
+                                Text("Dissimilar")
+                                    .foregroundColor(!isSimilar ? Color.red : Color.black)
+                                    .padding()
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .stroke(Color.red, lineWidth: !isSimilar ? 2 : 0)
+                                    )
+                                    .background(!isSimilar ? Color.white : Color.clear)
+                                    .cornerRadius(5)
                             }
-                            .foregroundColor(!isSimilar ? Color.red : Color.black)
-                            .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color.red, lineWidth: !isSimilar ? 2 : 0)
-                            )
-                            .background(!isSimilar ? Color.white : Color.clear)
-                            .cornerRadius(5)
                         }
                         .frame(maxWidth: .infinity, alignment: .center)
                     }
@@ -99,7 +102,7 @@ struct MatchView: View {
                     Spacer()
                     
                     Button(action: {
-                        // Implement your match finding logic here
+                        navigationController.selection = 3
                     }) {
                         HStack {
                             Text("Find a Match")
@@ -108,33 +111,23 @@ struct MatchView: View {
                             Image(systemName: "arrow.right")
                                 .foregroundColor(Color.red)
                         }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
                     }
                     .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .padding()
-                    .shadow(radius: 5)
-                    
+
                     Spacer()
                 }
             }
-            .navigationBarItems(leading: Button(action: {
-                // Action to go back or dismiss the view
-            }) {
-                HStack {
-                    Image(systemName: "chevron.left")
-                    Text("Back")
-                }
-                .foregroundColor(.white)
-            })
-            .navigationBarBackButtonHidden(true)
         }
     }
 }
 
-// Preview
 struct MatchView_Previews: PreviewProvider {
     static var previews: some View {
         MatchView()
+            .environmentObject(NavigationController())
     }
 }
