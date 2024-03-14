@@ -1,13 +1,29 @@
 import SwiftUI
 
+// Represents a single card view
+struct CardView: View {
+    var content: String
+    
+    var body: some View {
+        Text(content)
+            .padding()
+            .frame(width: 300, height: 400)
+            .background(Color.white)
+            .cornerRadius(10)
+            .shadow(radius: 5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray, lineWidth: 2)
+            )
+    }
+}
+
 struct SwipeView: View {
     
     @EnvironmentObject var navigationController: NavigationController
     
-    // Sample list of strings to be displayed on the cards
     @State var cardContents: [String] = ["First Person", "Second Person", "Third Person", "Fourth Person"]
     @State private var offset = CGSize.zero
-    @State private var degree: Double = 0
     
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [Color.red.opacity(0.7), .red]), startPoint: .top, endPoint: .bottom)
@@ -25,30 +41,24 @@ struct SwipeView: View {
                         Spacer()
                     }
                     Spacer()
-                    ZStack {
-                        ForEach(cardContents.indices.reversed(), id: \.self) { index in
-                            CardView(content: cardContents[index])
-                                .offset(x: 0, y: CGFloat(index) * 10)
-                                .offset(index == cardContents.count - 1 ? offset : .zero)
-                                .rotationEffect(.degrees(index == cardContents.count - 1 ? degree : 0))
+                    
+                    if !cardContents.isEmpty {
+                        ZStack {
+                            CardView(content: cardContents.last!)
+                                .offset(offset)
                                 .gesture(
-                                    index == cardContents.count - 1 ?
-                                        DragGesture()
+                                    DragGesture()
                                         .onChanged { gesture in
-                                            offset = gesture.translation
-                                            degree = Double(gesture.translation.width / 20)
+                                            self.offset = gesture.translation
                                         }
                                         .onEnded { _ in
-                                            withAnimation {
-                                                if abs(offset.width) > 100 {
-                                                    cardContents.removeLast()
-                                                }
-                                                
-                                                offset = .zero
-                                                degree = 0
+                                            if abs(self.offset.width) > 100 {
+                                                cardContents.removeLast()
                                             }
-                                        } : nil
+                                            self.offset = .zero
+                                        }
                                 )
+                                .animation(.easeInOut, value: offset)
                         }
                     }
                     Spacer()
@@ -57,25 +67,8 @@ struct SwipeView: View {
     }
 }
 
-struct CardView: View {
-    var content: String
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(.white)
-                .cornerRadius(20)
-                .shadow(radius: 5)
-            Text(content)
-                .font(.title)
-                .foregroundColor(.black)
-        }
-        .frame(width: 300, height: 400)
-    }
-}
-
 struct SwipeView_Previews: PreviewProvider {
     static var previews: some View {
-        SwipeView()
+        SwipeView().environmentObject(NavigationController())
     }
 }
