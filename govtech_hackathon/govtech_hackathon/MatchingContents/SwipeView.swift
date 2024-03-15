@@ -59,16 +59,9 @@ struct SwipeView: View {
     @EnvironmentObject var navigationController: NavigationController
     
     @State var people: [Person] = [
-        Person(name: "Alice Johnson", profileImage: "profileImage", department: "HR", interests: ["Gardening", "Reading"], responsibilities: "Hiring"),
-        Person(name: "Bob Smith", profileImage: "profileImage", department: "IT", interests: ["Gaming", "Coding"], responsibilities: "Network Security"),
-        Person(name: "Charlie Davis", profileImage: "profileImage", department: "Finance", interests: ["Investing", "Chess"], responsibilities: "Budgeting"),
-        Person(name: "Diana Brooks", profileImage: "profileImage", department: "Marketing", interests: ["Social Media", "Design"], responsibilities: "Advertising"),
-        Person(name: "Evan Wright", profileImage: "profileImage", department: "Sales", interests: ["Sales Techniques", "Public Speaking"], responsibilities: "Client Relations"),
-        Person(name: "Fiona Hill", profileImage: "profileImage", department: "Operations", interests: ["Logistics", "Efficiency Optimizing"], responsibilities: "Supply Chain Management"),
-        Person(name: "George Long", profileImage: "profileImage", department: "Research and Development", interests: ["Innovation", "Product Design"], responsibilities: "New Product Development"),
-        Person(name: "Hannah East", profileImage: "profileImage", department: "Customer Service", interests: ["Problem Solving", "Communication"], responsibilities: "Customer Support"),
-        Person(name: "Ian Moore", profileImage: "profileImage", department: "Legal", interests: ["Law", "Ethics"], responsibilities: "Compliance"),
-        Person(name: "Jenny Adams", profileImage: "profileImage", department: "Administration", interests: ["Organization", "Planning"], responsibilities: "Office Management")
+        Person(name: "Nina Gammenthaler", profileImage: "profileImage2", department: "Bundeskanzlei", interests: ["Gardening", "Baking"], responsibilities: "AI,CloudGovernance"),
+        Person(name: "Lukas Willi", profileImage: "profileImage3", department: "Strategy & Tech", interests: ["Fitness", "Dog"], responsibilities: "Generative AI"),
+        Person(name: "Viktor Rossi", profileImage: "profileImage4", department: "Bundeskanzlei", interests: ["Politics", "GEVER"], responsibilities: "All"),
     ]
     
     @State private var offset = CGSize.zero // Tracks the swipe gesture
