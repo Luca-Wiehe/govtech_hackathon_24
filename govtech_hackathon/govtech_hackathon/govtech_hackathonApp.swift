@@ -13,6 +13,7 @@ struct govtech_hackathonApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(NavigationController())
+                .environmentObject(TimeManager())
         }
     }
 }
