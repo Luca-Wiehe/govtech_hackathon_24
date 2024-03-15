@@ -69,4 +69,5 @@ From a developer's perspective, there are a few technical requirements that need
 + SwiftOpenAI (package for OpenAI API support in Swift)
 + OpenAI API key (to be pasted inside `ChatbotView.swift`)
 
-## Software Architecture
+## Architecture
+<img width="400" alt="image" src="https://github.com/Luca-Wiehe/govtech_hackathon_24/assets/85710000/2603c12a-4947-4207-804d-4d7b30686ff8">
