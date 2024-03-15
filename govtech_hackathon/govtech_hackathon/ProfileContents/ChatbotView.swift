@@ -4,7 +4,7 @@ import SwiftOpenAI
 struct ChatbotView: View {
     @State private var messageText: String = ""
     @State private var messageList: [String] = []
-    var openAI = SwiftOpenAI(apiKey: "your-api-key")
+    var openAI = SwiftOpenAI(apiKey: "api-key")
     
     // Define the initial message to send to the chatbot. This message is the key to guide the user correctly.
     private let initialMessage = """

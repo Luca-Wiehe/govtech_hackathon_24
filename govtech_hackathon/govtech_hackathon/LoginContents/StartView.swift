@@ -21,7 +21,7 @@ struct StartView: View {
                             Image(systemName: "link")
                                 .foregroundColor(.red)
                                 .bold()
-                            Text("Login with AdminDirectory")
+                            Text("Connect AdminDirectory")
                                 .foregroundColor(.red)
                                 .bold()
                         }
