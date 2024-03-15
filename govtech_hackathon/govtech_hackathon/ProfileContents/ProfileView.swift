@@ -40,7 +40,7 @@ struct BackgroundView<Content: View>: View {
 
 struct ProfileImageView: View {
     var body: some View {
-        Image("profileImage")
+        Image("profileImage2")
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 100, height: 100)
@@ -53,11 +53,11 @@ struct ProfileImageView: View {
 struct UserInfoView: View {
     var body: some View {
         VStack {
-            Text("Luca Wiehe")
+            Text("Nina Gammenthaler")
                 .fontWeight(.heavy)
                 .font(.title)
             
-            Text("Department of Finance")
+            Text("Bundeskanzlei")
                 .font(.subheadline)
                 .foregroundColor(.gray)
                 .padding(.top, -12)

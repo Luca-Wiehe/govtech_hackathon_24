@@ -59,9 +59,10 @@ struct SwipeView: View {
     @EnvironmentObject var navigationController: NavigationController
     
     @State var people: [Person] = [
-        Person(name: "Nina Gammenthaler", profileImage: "profileImage2", department: "Bundeskanzlei", interests: ["Gardening", "Baking"], responsibilities: "AI,CloudGovernance"),
-        Person(name: "Lukas Willi", profileImage: "profileImage3", department: "Strategy & Tech", interests: ["Fitness", "Dog"], responsibilities: "Generative AI"),
         Person(name: "Viktor Rossi", profileImage: "profileImage4", department: "Bundeskanzlei", interests: ["Politics", "GEVER"], responsibilities: "All"),
+        Person(name: "Luca Wiehe", profileImage: "profileImage", department: "Extern", interests: ["Chess", "Saxophone"], responsibilities: "Nothing"),
+        Person(name: "Lukas Willi", profileImage: "profileImage3", department: "Strategy & Tech", interests: ["Fitness", "Dog"], responsibilities: "Generative AI"),
+        
     ]
     
     @State private var offset = CGSize.zero // Tracks the swipe gesture
