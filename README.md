@@ -37,7 +37,7 @@ When launching a new tool, it is important that new users can adapt the applicat
 + `govtech_hackathonApp`: Launches the application
 + `ContentView.swift`: Main View of the app. Starting point of all navigation actions
 + `HomeView.swift`: Starting point for TabViews, i.e. Matching, Calendar, Profile
-+ `CalendarView.swift`: CSS Styles for UI Components and UI Pages
++ `CalendarView.swift`: Implementation of Calendar to show meetings
 
 `/Models/`: Contains objects and data structures that are used throughout the application
 + `Person.swift`: Data structure to manage user's attributes
