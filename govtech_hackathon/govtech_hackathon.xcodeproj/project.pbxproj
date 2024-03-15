@@ -22,6 +22,7 @@
 		CD47D94F2BA32B59004F0019 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D94E2BA32B59004F0019 /* NavigationController.swift */; };
 		CD47D9512BA33A76004F0019 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9502BA33A76004F0019 /* MatchView.swift */; };
 		CD47D9532BA33A97004F0019 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9522BA33A97004F0019 /* SwipeView.swift */; };
+		CD47D9562BA3B22D004F0019 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9552BA3B22D004F0019 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		CD47D94E2BA32B59004F0019 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CD47D9502BA33A76004F0019 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		CD47D9522BA33A97004F0019 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		CD47D9552BA3B22D004F0019 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		CD47D9192BA308FC004F0019 /* govtech_hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				CD47D9542BA3B216004F0019 /* Models */,
 				CD47D91A2BA308FC004F0019 /* govtech_hackathonApp.swift */,
 				CD47D91C2BA308FC004F0019 /* ContentView.swift */,
 				CD47D91E2BA30900004F0019 /* Assets.xcassets */,
@@ -149,6 +152,14 @@
 				CD47D9372BA30901004F0019 /* govtech_hackathonUITestsLaunchTests.swift */,
 			);
 			path = govtech_hackathonUITests;
+			sourceTree = "<group>";
+		};
+		CD47D9542BA3B216004F0019 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD47D9552BA3B22D004F0019 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				CD47D94F2BA32B59004F0019 /* NavigationController.swift in Sources */,
 				CD47D9452BA30A8F004F0019 /* HomeView.swift in Sources */,
 				CD47D9532BA33A97004F0019 /* SwipeView.swift in Sources */,
+				CD47D9562BA3B22D004F0019 /* Person.swift in Sources */,
 				CD47D91D2BA308FC004F0019 /* ContentView.swift in Sources */,
 				CD47D9512BA33A76004F0019 /* MatchView.swift in Sources */,
 				CD47D91B2BA308FC004F0019 /* govtech_hackathonApp.swift in Sources */,
