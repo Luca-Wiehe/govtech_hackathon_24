@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "openaiswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adamrushy/OpenAISwift",
+      "state" : {
+        "revision" : "ca66fb720d6ebb657601db5a0852b830ae310a4c",
+        "version" : "1.4.1"
+      }
+    },
+    {
+      "identity" : "swiftopenai?tab=readme-ov-file#-usage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftBeta/SwiftOpenAI?tab=readme-ov-file#-usage",
+      "state" : {
+        "revision" : "3afefca7cfa249f163c4696f7b13a698c369ff76",
+        "version" : "1.6.0"
+      }
+    }
+  ],
+  "version" : 2
+}

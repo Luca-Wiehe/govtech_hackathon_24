@@ -83,19 +83,18 @@ struct ActionButtonsView: View {
 
 struct ChatGPTButton: View {
     var body: some View {
-        HStack {
-            Button(action: {
-                // Action for filling the questionnaire
-            }) {
+        NavigationLink(destination: ChatbotView()) {
+            HStack {
                 Text("Let ChatGPT complete your profile")
                     .underline()
                     .foregroundColor(.red)
+                Spacer()
             }
-            Spacer()
+            .padding(.horizontal, 20)
         }
-        .padding(.horizontal, 20)
     }
 }
+
 
 struct TimePreferencesButton: View {
     var body: some View {

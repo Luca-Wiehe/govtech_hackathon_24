@@ -27,6 +27,9 @@
 		CDE1AD412BA3E18600B4E10C /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD402BA3E18600B4E10C /* TimeManager.swift */; };
 		CDE1AD432BA3E87F00B4E10C /* PersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD422BA3E87F00B4E10C /* PersonalInformationView.swift */; };
 		CDE1AD452BA3F13A00B4E10C /* ProfileInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD442BA3F13A00B4E10C /* ProfileInformationManager.swift */; };
+		CDE1AD472BA3F86800B4E10C /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD462BA3F86800B4E10C /* ChatbotView.swift */; };
+		CDE1AD4A2BA3F97600B4E10C /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDE1AD492BA3F97600B4E10C /* OpenAISwift */; };
+		CDE1AD4F2BA40F8400B4E10C /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CDE1AD4E2BA40F8400B4E10C /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,7 @@
 		CDE1AD402BA3E18600B4E10C /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		CDE1AD422BA3E87F00B4E10C /* PersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationView.swift; sourceTree = "<group>"; };
 		CDE1AD442BA3F13A00B4E10C /* ProfileInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationManager.swift; sourceTree = "<group>"; };
+		CDE1AD462BA3F86800B4E10C /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE1AD4F2BA40F8400B4E10C /* SwiftOpenAI in Frameworks */,
+				CDE1AD4A2BA3F97600B4E10C /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +143,7 @@
 				CDE1AD402BA3E18600B4E10C /* TimeManager.swift */,
 				CDE1AD422BA3E87F00B4E10C /* PersonalInformationView.swift */,
 				CDE1AD442BA3F13A00B4E10C /* ProfileInformationManager.swift */,
+				CDE1AD462BA3F86800B4E10C /* ChatbotView.swift */,
 			);
 			path = govtech_hackathon;
 			sourceTree = "<group>";
@@ -190,6 +197,10 @@
 			dependencies = (
 			);
 			name = govtech_hackathon;
+			packageProductDependencies = (
+				CDE1AD492BA3F97600B4E10C /* OpenAISwift */,
+				CDE1AD4E2BA40F8400B4E10C /* SwiftOpenAI */,
+			);
 			productName = govtech_hackathon;
 			productReference = CD47D9172BA308FC004F0019 /* govtech_hackathon.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +273,10 @@
 				Base,
 			);
 			mainGroup = CD47D90E2BA308FC004F0019;
+			packageReferences = (
+				CDE1AD482BA3F97600B4E10C /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				CDE1AD4D2BA40F8400B4E10C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+			);
 			productRefGroup = CD47D9182BA308FC004F0019 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -316,6 +331,7 @@
 				CD47D91B2BA308FC004F0019 /* govtech_hackathonApp.swift in Sources */,
 				CDE1AD3F2BA3D97F00B4E10C /* TimePreferencesView.swift in Sources */,
 				CD47D94B2BA30AE5004F0019 /* ProfileView.swift in Sources */,
+				CDE1AD472BA3F86800B4E10C /* ChatbotView.swift in Sources */,
 				CDE1AD432BA3E87F00B4E10C /* PersonalInformationView.swift in Sources */,
 				CD47D9472BA30AAB004F0019 /* StartView.swift in Sources */,
 				CD47D94D2BA310E8004F0019 /* GrantAccessView.swift in Sources */,
@@ -642,6 +658,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDE1AD482BA3F97600B4E10C /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		CDE1AD4D2BA40F8400B4E10C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI?tab=readme-ov-file#-usage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDE1AD492BA3F97600B4E10C /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDE1AD482BA3F97600B4E10C /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		CDE1AD4E2BA40F8400B4E10C /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDE1AD4D2BA40F8400B4E10C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD47D90F2BA308FC004F0019 /* Project object */;
 }
