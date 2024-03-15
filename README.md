@@ -34,6 +34,35 @@ In large organizations, it is almost unavoidable to have redundancies of respons
 When launching a new tool, it is important that new users can adapt the application effortlessly. iOS is the most popular operating system in Switzerland, resulting in a low threshold for new users to try the application. Additionally, Apple is known for its high security standards which is particularly relevant in the context of confidential data or conversations that may take place between users. For these reasons, we decided to use Swift - Apple's programming language for its own operating systems - to implement GovMatch. 
 
 ### Repository Structure
++ `govtech_hackathonApp`: Launches the application
++ `ContentView.swift`: Main View of the app. Starting point of all navigation actions
++ `HomeView.swift`: Starting point for TabViews, i.e. Matching, Calendar, Profile
+
+`/Models/`: Contains objects and data structures that are used throughout the application
++ `Person.swift`: Data structure to manage user's attributes
+
+`/Assets/`: Contains permanent resources (e.g. images, color schemes etc.)
+
+`/StateManagement/`: Contains objects that need to be globally accessible
++ `ProfileInformationManager.swift`: Global storage for user data (should be stored on a separate server in the future)
++ `TimeManager.swift`: Global storage for preferred meeting times and MeetingData
++ `NavigationController.swift`: Global state to manage navigation hierarchy
+
+`/LoginContents/`: User Authentication
++ `StartView.swift`: Landing page with button to connect to AdminDirectory
++ `GrantAccessView.swift`: Verifies that users give access to their AdminDirectory
+
+`/MatchingContents/`: Matching Logic
++ `MatchView.swift`: View to select matching criteria
++ `SwipeView.swift`: View to look for potential business matches
+
+`/ProfileContents/`: Profile Information
++ `PersonalInformationView.swift`: Collects information such as interests and skills
++ `TimePreferencesView.swift`: Allows user select their preferred times for certain MeetingTypes
++ `ChatbotView.swift`: Extracts additional information about the student
++ `ProfileView.swift`: Displays buttons to let users adjust their profile
+
++ `CalendarView.swift`: CSS Styles for UI Components and UI Pages
 
 ### Technical Requirements
 From a developer's perspective, there are a few technical requirements that need to be met to further implement the application
