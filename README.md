@@ -25,3 +25,20 @@ In many cases, images are much more expressive than words. The following images 
     <br>
     <em>Screenshot 4: Seemless Outlook Calendar integration to not forget about your meetings</em>
   </div>
+
+## Project Description
+### Motivation for Application
+In large organizations, it is almost unavoidable to have redundancies of responsibilities and tasks. In some cases, this overlap of responsibilities is intended - with a minor overlap it is much more likely that people understand each other's view points. In other cases, these similar tasks are far spread across an organization, making it almost impossible to efficiently find another person to ask questions. Knowing about the existence of people with specific skills is therefore an important asset in business contexts, and also for the government. Motivated by the fact that people with diverse backgrounds will not find each other easily, GovMatch seeks to meet this business requirement.
+
+### Choice of Tech Stack
+When launching a new tool, it is important that new users can adapt the application effortlessly. iOS is the most popular operating system in Switzerland, resulting in a low threshold for new users to try the application. Additionally, Apple is known for its high security standards which is particularly relevant in the context of confidential data or conversations that may take place between users. For these reasons, we decided to use Swift - Apple's programming language for its own operating systems - to implement GovMatch. 
+
+### Repository Structure
+
+### Technical Requirements
+From a developer's perspective, there are a few technical requirements that need to be met to further implement the application
++ Apple's development environment XCode and the corresponding CommandlineTools need to be installed
++ SwiftOpenAI (package for OpenAI API support in Swift)
++ OpenAI API key (to be pasted inside `ChatbotView.swift`)
+
+## Software Architecture
