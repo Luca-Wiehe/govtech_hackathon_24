@@ -11,7 +11,7 @@ struct MatchView: View {
 
     private let cities = ["Zurich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "St. Gallen", "Lugano"]
     private let languages = ["French", "Italian", "German", "English"]
-    private let interactionTypes = ["Coffee Chat", "Project-Related", "Interest-Based"]
+    private let interactionTypes = ["Coffee Chat", "Lunch Break", "Dinner Meetup", "Project-Related"]
 
     var body: some View {
         NavigationView {

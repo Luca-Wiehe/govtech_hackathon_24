@@ -23,4 +23,5 @@ struct ContentView: View {
     ContentView()
         .environmentObject(NavigationController())
         .environmentObject(TimeManager())
+        .environmentObject(PersonalInformationManager())
 }

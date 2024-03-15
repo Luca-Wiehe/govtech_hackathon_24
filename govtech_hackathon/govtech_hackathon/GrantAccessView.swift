@@ -20,7 +20,6 @@ struct GrantAccessView: View {
                     
                     Button(action: {
                         navigationController.selection = 1
-                        print("navigationController.selection: \(navigationController.selection)")
                     }) {
                         Text("Confirm")
                             .bold()
@@ -36,7 +35,6 @@ struct GrantAccessView: View {
                     
                     Button(action: {
                         navigationController.selection = 0
-                        print("navigationController.selection: \(navigationController.selection)")
                     }) {
                         Text("Reject")
                             .bold()

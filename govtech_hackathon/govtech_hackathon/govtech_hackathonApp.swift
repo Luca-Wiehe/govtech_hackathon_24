@@ -14,6 +14,7 @@ struct govtech_hackathonApp: App {
             ContentView()
                 .environmentObject(NavigationController())
                 .environmentObject(TimeManager())
+                .environmentObject(PersonalInformationManager())
         }
     }
 }

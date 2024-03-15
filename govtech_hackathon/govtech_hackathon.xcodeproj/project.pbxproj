@@ -25,6 +25,8 @@
 		CD47D9562BA3B22D004F0019 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47D9552BA3B22D004F0019 /* Person.swift */; };
 		CDE1AD3F2BA3D97F00B4E10C /* TimePreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD3E2BA3D97F00B4E10C /* TimePreferencesView.swift */; };
 		CDE1AD412BA3E18600B4E10C /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD402BA3E18600B4E10C /* TimeManager.swift */; };
+		CDE1AD432BA3E87F00B4E10C /* PersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD422BA3E87F00B4E10C /* PersonalInformationView.swift */; };
+		CDE1AD452BA3F13A00B4E10C /* ProfileInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1AD442BA3F13A00B4E10C /* ProfileInformationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		CD47D9552BA3B22D004F0019 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CDE1AD3E2BA3D97F00B4E10C /* TimePreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePreferencesView.swift; sourceTree = "<group>"; };
 		CDE1AD402BA3E18600B4E10C /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		CDE1AD422BA3E87F00B4E10C /* PersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationView.swift; sourceTree = "<group>"; };
+		CDE1AD442BA3F13A00B4E10C /* ProfileInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				CD47D9522BA33A97004F0019 /* SwipeView.swift */,
 				CDE1AD3E2BA3D97F00B4E10C /* TimePreferencesView.swift */,
 				CDE1AD402BA3E18600B4E10C /* TimeManager.swift */,
+				CDE1AD422BA3E87F00B4E10C /* PersonalInformationView.swift */,
+				CDE1AD442BA3F13A00B4E10C /* ProfileInformationManager.swift */,
 			);
 			path = govtech_hackathon;
 			sourceTree = "<group>";
@@ -306,9 +312,11 @@
 				CD47D91D2BA308FC004F0019 /* ContentView.swift in Sources */,
 				CD47D9512BA33A76004F0019 /* MatchView.swift in Sources */,
 				CDE1AD412BA3E18600B4E10C /* TimeManager.swift in Sources */,
+				CDE1AD452BA3F13A00B4E10C /* ProfileInformationManager.swift in Sources */,
 				CD47D91B2BA308FC004F0019 /* govtech_hackathonApp.swift in Sources */,
 				CDE1AD3F2BA3D97F00B4E10C /* TimePreferencesView.swift in Sources */,
 				CD47D94B2BA30AE5004F0019 /* ProfileView.swift in Sources */,
+				CDE1AD432BA3E87F00B4E10C /* PersonalInformationView.swift in Sources */,
 				CD47D9472BA30AAB004F0019 /* StartView.swift in Sources */,
 				CD47D94D2BA310E8004F0019 /* GrantAccessView.swift in Sources */,
 			);

@@ -100,7 +100,7 @@ struct ChatGPTButton: View {
 struct TimePreferencesButton: View {
     var body: some View {
         NavigationLink(destination: TimePreferencesView()) {
-            ButtonContent(imageName: "clock", buttonText: "Select Time Preferences", buttonColor: .red)
+            ButtonContent(imageName: "gear", buttonText: "Profile Preferences", buttonColor: .red)
         }
     }
 }
@@ -111,7 +111,7 @@ struct SynchronizeCalendarButton: View {
             // Action for synchronizing Outlook calendar
         }) {
             HStack {
-                Image("outlookIcon") // Reverted to use the actual image
+                Image("outlookIcon")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 32, height: 32)
@@ -153,5 +153,6 @@ struct ButtonContent: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .environmentObject(TimeManager())
     }
 }

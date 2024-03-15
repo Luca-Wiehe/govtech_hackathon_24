@@ -8,6 +8,7 @@ struct TimePreferencesView: View {
     @State private var startMinute: String = ""
     @State private var endHour: String = ""
     @State private var endMinute: String = ""
+    @State private var showPersonalInformationView: Bool = false
 
     var body: some View {
         BackgroundView {
@@ -15,68 +16,71 @@ struct TimePreferencesView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    RoundedRectangle(cornerRadius: 25.0)
-                        .fill(Color.white)
-                        .frame(width: UIScreen.main.bounds.width - 32, height: 500)
-                        .overlay(
-                            VStack {
-                                Text("Select a Meeting Time")
-                                    .font(.headline)
-                                    .padding(.top, 20)
-                                    .padding(.bottom, 20)
-                                
-                                HStack(spacing: 10) {
-                                    ForEach(TimeOption.allCases, id: \.self) { option in
-                                        Button(action: {
-                                            self.selectedTime = option
-                                            updateFieldsForSelectedTime()
-                                        }) {
-                                            Text(option.rawValue)
-                                                .foregroundColor(self.selectedTime == option ? .white : .red)
-                                                .padding()
-                                                .frame(maxWidth: .infinity, minHeight: 50)
-                                                .background(self.selectedTime == option ? Color.red : .clear)
-                                                .cornerRadius(10)
-                                                .overlay(
-                                                    RoundedRectangle(cornerRadius: 10)
-                                                        .stroke(Color.red, lineWidth: 2)
-                                                )
-                                                .fixedSize(horizontal: false, vertical: true)
+                    if !showPersonalInformationView {
+                        // Time preferences form
+                        RoundedRectangle(cornerRadius: 25.0)
+                            .fill(Color.white)
+                            .frame(width: UIScreen.main.bounds.width - 32, height: 500)
+                            .overlay(
+                                VStack {
+                                    Text("Select a Meeting Time")
+                                        .font(.headline)
+                                        .padding(.top, 20)
+                                        .padding(.bottom, 20)
+                                    
+                                    HStack(spacing: 10) {
+                                        ForEach(TimeOption.allCases, id: \.self) { option in
+                                            Button(action: {
+                                                self.selectedTime = option
+                                                updateFieldsForSelectedTime()
+                                            }) {
+                                                Text(option.rawValue)
+                                                    .foregroundColor(self.selectedTime == option ? .white : .red)
+                                                    .padding()
+                                                    .frame(maxWidth: .infinity, minHeight: 50)
+                                                    .background(self.selectedTime == option ? Color.red : .clear)
+                                                    .cornerRadius(10)
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 10)
+                                                            .stroke(Color.red, lineWidth: 2)
+                                                    )
+                                                    .fixedSize(horizontal: false, vertical: true)
+                                            }
                                         }
                                     }
-                                }
-                                .frame(maxWidth: .infinity)
-                                
-                                Group {
-                                    Text("Choose preferred start time")
-                                        .font(.headline)
-                                    TimeInputView(hour: $startHour, minute: $startMinute)
+                                    .frame(maxWidth: .infinity)
                                     
-                                    Text("Choose preferred end time")
-                                        .font(.headline)
-                                    TimeInputView(hour: $endHour, minute: $endMinute)
+                                    Group {
+                                        Text("Choose preferred start time")
+                                            .font(.headline)
+                                        TimeInputView(hour: $startHour, minute: $startMinute)
+                                        
+                                        Text("Choose preferred end time")
+                                            .font(.headline)
+                                        TimeInputView(hour: $endHour, minute: $endMinute)
+                                    }
+                                    .padding(.top, 10)
+                                    
+                                    Spacer()
+                                    
+                                    Button(action: {
+                                        saveTimePreferences()
+                                    }) {
+                                        Text("Save")
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.white)
+                                            .frame(width: 200, height: 50)
+                                            .background(Color.red)
+                                            .cornerRadius(10)
+                                    }
+                                    .padding(.bottom, 30)
                                 }
-                                .padding(.top, 10)
-                                
-                                Spacer()
-                                
-                                Button(action: {
-                                    let startTime = "\(startHour):\(startMinute)"
-                                    let endTime = "\(endHour):\(endMinute)"
-                                    timeManager.updateTimes(for: selectedTime, startTime: startTime, endTime: endTime)
-                                    presentationMode.wrappedValue.dismiss()
-                                }) {
-                                    Text("Save")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .frame(width: 200, height: 50)
-                                        .background(Color.red)
-                                        .cornerRadius(10)
-                                }
-                                .padding(.bottom, 30)
-                            }
-                            .padding(.horizontal)
-                        )
+                                .padding(.horizontal)
+                            )
+                    } else {
+                        // Personal information view
+                        PersonalInformationView()
+                    }
                     Spacer()
                 }
                 Spacer()
@@ -111,6 +115,13 @@ struct TimePreferencesView: View {
             endMinute = ""
         }
     }
+    
+    private func saveTimePreferences() {
+        let startTime = "\(startHour):\(startMinute)"
+        let endTime = "\(endHour):\(endMinute)"
+        timeManager.updateTimes(for: selectedTime, startTime: startTime, endTime: endTime)
+        showPersonalInformationView = true
+    }
 }
 
 struct TimeInputView: View {
@@ -141,7 +152,6 @@ enum TimeOption: String, CaseIterable {
     case lunchBreak = "Lunch Break"
     case dinnerMeetup = "Dinner Meetup"
 }
-
 
 #Preview {
     TimePreferencesView()
